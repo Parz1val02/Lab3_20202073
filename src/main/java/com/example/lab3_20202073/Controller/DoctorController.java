@@ -25,4 +25,11 @@ public class DoctorController {
         model.addAttribute("listaDoctores", lista);
         return "doctor/lista";
     }
+
+    @GetMapping("/derivarPacientes")
+    public String derivarPaciente(Model model) {
+        List<DoctorEntity> lista = doctorRepository.findAll();
+        model.addAttribute("listaDoctores", lista);
+        return "doctor/derivar";
+    }
 }

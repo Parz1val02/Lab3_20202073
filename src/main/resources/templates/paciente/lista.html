@@ -30,6 +30,8 @@
             </ul>
         </div>
     </nav>
+    <a class="btn btn-success" th:href="@{/derivarPacientes}">Derivar pacientes</a>
+    <br>
     <table class="table table-sm">
         <tr>
             <th>#</th>
@@ -44,9 +46,8 @@
             <td th:text="${paciente.nombrePaciente}"></td>
             <td th:text="${paciente.doctor.nombreDoctor}"></td>
             <td th:text="${paciente.hospital.nombreHospital}"></td>
-            <td><a class="btn btn-primary" >Editar paciente</a>
+            <td><a class="btn btn-primary" th:href="@{'/editarPaciente' + '?id=' + ${paciente.idPaciente}}">Editar paciente</a>
             </td>
-            <td><a class="btn btn-success" >Derivar paciente</a></td>
         </tr>
     </table>
 </div>
