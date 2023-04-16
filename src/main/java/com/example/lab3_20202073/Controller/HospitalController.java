@@ -21,11 +21,5 @@ public class HospitalController {
         model.addAttribute("listaHospitales", lista);
         return "hospital/lista";
     }
-    @GetMapping("/hospitalDoctores")
-    public String doctores(Model model, @RequestParam("id") Integer id){
-        List<DoctorEntity> lista = hospitalRepository.buscarDoctores(id);
-        model.addAttribute("listaDoctores", lista);
-        return "doctor/lista";
-    }
 
 }

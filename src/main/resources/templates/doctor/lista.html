@@ -44,9 +44,9 @@
             <td th:text="${doctor.nombreDoctor}"></td>
             <td th:text="${doctor.especialidad}"></td>
             <td th:text="${doctor.hospital.nombreHospital}"></td>
-            <td><a class="btn btn-primary" >Mostrar pacientes</a>
+            <td><a class="btn btn-primary" th:href="@{'/doctorPacientes' + '?id=' + ${doctor.getIdDoctor()}}">Mostrar pacientes</a>
             </td>
-            <td><a class="btn btn-success" >Proximas citas</a></td>
+            <td><a class="btn btn-success" th:href="@{'/doctorPacientesAtender' + '?id=' + ${doctor.getIdDoctor()}}">Proximas citas</a></td>
         </tr>
     </table>
 </div>

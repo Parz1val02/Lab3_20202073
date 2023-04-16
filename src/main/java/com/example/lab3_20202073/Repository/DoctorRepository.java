@@ -8,5 +8,6 @@ import javax.print.Doc;
 import java.util.List;
 
 public interface DoctorRepository extends JpaRepository<DoctorEntity, Integer> {
-
+    @Query(nativeQuery = true, value = "select * from doctor where hospital_id=?1")
+    List<DoctorEntity> buscarDoctores(Integer id);
 }

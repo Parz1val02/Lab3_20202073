@@ -46,7 +46,7 @@
       <td th:text="${hospital.telefonoHospital}"></td>
       <td><a class="btn btn-primary" th:href="@{'/hospitalDoctores' + '?id=' + ${hospital.idHospital}}">Mostrar doctores</a>
       </td>
-      <td><a class="btn btn-success" >Mostrar pacientes</a></td>
+      <td><a class="btn btn-success" th:href="@{'/hospitalPacientes' + '?id=' + ${hospital.idHospital}}">Mostrar pacientes</a></td>
     </tr>
   </table>
 </div>

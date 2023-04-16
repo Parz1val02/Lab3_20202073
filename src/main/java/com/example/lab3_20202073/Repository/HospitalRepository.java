@@ -8,7 +8,4 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface HospitalRepository extends JpaRepository<HospitalEntity, Integer> {
-    @Query(value = "select * from doctor where hospital_id=?1;",
-            nativeQuery = true)
-    List<DoctorEntity> buscarDoctores(Integer id);
 }
